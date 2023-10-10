@@ -1,0 +1,90 @@
+:root {
+  --slide-1: url("./00631_3805288358_0000_by_miniyen_dgalaa0-375w-2x.jpg");
+  --slide-2: url("./cat_girl__2_by_met4lhe4d_dgare29-pre.jpg");
+  --slide-3: url("./hoodie_angel_by_hiderokii_dgasoxh-pre.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background: #101010;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.container .card:nth-child(1) {
+  background-image: var(--slide-1);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.container .card:nth-child(2) {
+  background-image: var(--slide-2);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.container .card:nth-child(3) {
+  background-image: var(--slide-3);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.card__info {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  scale: 0;
+  transition: 0.5s;
+}
+
+.card:hover .card__info {
+  scale: 1;
+  transform: rotate(12deg);
+}
+
+.card__title {
+  font-size: 2.85em;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #ef9595;
+}
+
+.card__descrip {
+  font-size: 1.2em;
+  color: #beadfa;
+}
